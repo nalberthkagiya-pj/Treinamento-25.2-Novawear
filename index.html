@@ -1,1 +1,178 @@
 <!-- Colocar código HTML aqui (e linkar js e css!) -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Novawear</title>
+  <link rel="stylesheet" href="assets/css/globals.css" />
+</head>
+<body>
+
+  <div id="login-screen" class="screen">
+    <div class="login-box">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Usuário" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button onclick="login()">Entrar</button>
+    </div>
+  </div>
+
+  <div id="store-screen" class="screen" style="display: none;">
+    <header>
+      <h1>Novawear</h1>
+      <button id="cart-btn" onclick="toggleCart()">🛒 Carrinho (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <main>
+      <div class="products">
+
+        <div class="product">
+          <h3>Camiseta Basica</h3>
+          <img src="assets/imgs/camisetabasica.jpg" alt="Camiseta Basica">
+          <p>R$ 29,90</p>
+          <button class="buy" onclick="addToCart('Camiseta Basica', 29.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Calca Jeans</h3>
+          <img src="assets/imgs/calcajeans.jpg" alt="Calca Jeans">
+          <p>R$ 89,90</p>
+          <button class="buy" onclick="addToCart('Calca Jeans', 89.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Moletom</h3>
+          <img src="assets/imgs/moletom.jpg" alt="Moletom">
+          <p>R$ 119,90</p>
+          <button class="buy" onclick="addToCart('Moletom', 119.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Blusa de Malha</h3>
+          <img src="assets/imgs/blusademalha.jpg" alt="Blusa de Malha">
+          <p>R$ 59,90</p>
+          <button class="buy" onclick="addToCart('Blusa de Malha', 59.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Regata</h3>
+          <img src="assets/imgs/regata.jpg" alt="Regata">
+          <p>R$ 39,90</p>
+          <button class="buy" onclick="addToCart('Regata', 39.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Camisa de Botao</h3>
+          <img src="assets/imgs/camisadebotao.jpg" alt="Camisa de Botao">
+          <p>R$ 79,90</p>
+          <button class="buy" onclick="addToCart('Camisa de Botao', 79.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Blusa de Manga Longa</h3>
+          <img src="assets/imgs/blusademangalonga.jpg" alt="Blusa de Manga Longa">
+          <p>R$ 69,90</p>
+          <button class="buy" onclick="addToCart('Blusa de Manga Longa', 69.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Jaqueta Jeans</h3>
+          <img src="assets/imgs/jaquetajeans.jpg" alt="Jaqueta Jeans">
+          <p>R$ 149,90</p>
+          <button class="buy" onclick="addToCart('Jaqueta Jeans', 149.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Blazer</h3>
+          <img src="assets/imgs/blazer.jpg" alt="Blazer">
+          <p>R$ 199,90</p>
+          <button class="buy" onclick="addToCart('Blazer', 199.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Sueter</h3>
+          <img src="assets/imgs/sueter.jpg" alt="Sueter">
+          <p>R$ 89,90</p>
+          <button class="buy" onclick="addToCart('Sueter', 89.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Calca de Alfaiataria</h3>
+          <img src="assets/imgs/calcadealfaiataria.jpg" alt="Calca de Alfaiataria">
+          <p>R$ 139,90</p>
+          <button class="buy" onclick="addToCart('Calca de Alfaiataria', 139.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Calca de Moletom</h3>
+          <img src="assets/imgs/calcademoletom.jpg" alt="Calca de Moletom">
+          <p>R$ 79,90</p>
+          <button class="buy" onclick="addToCart('Calca de Moletom', 79.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Short</h3>
+          <img src="assets/imgs/short.jpg" alt="Short">
+          <p>R$ 49,90</p>
+          <button class="buy" onclick="addToCart('Short', 49.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Saia</h3>
+          <img src="assets/imgs/saia.jpg" alt="Saia">
+          <p>R$ 69,90</p>
+          <button class="buy" onclick="addToCart('Saia', 69.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Vestido</h3>
+          <img src="assets/imgs/vestido.jpg" alt="Vestido">
+          <p>R$ 129,90</p>
+          <button class="buy" onclick="addToCart('Vestido', 129.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Macacao</h3>
+          <img src="assets/imgs/macacao.jpg" alt="Macacao">
+          <p>R$ 159,90</p>
+          <button class="buy" onclick="addToCart('Macacao', 159.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Tenis Casual</h3>
+          <img src="assets/imgs/teniscasual.jpg" alt="Tenis Casual">
+          <p>R$ 179,90</p>
+          <button class="buy" onclick="addToCart('Tenis Casual', 179.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Cinto</h3>
+          <img src="assets/imgs/cinto.jpg" alt="Cinto">
+          <p>R$ 39,90</p>
+          <button class="buy" onclick="addToCart('Cinto', 39.90)">Adicionar</button>
+        </div>
+
+        <div class="product">
+          <h3>Bolsa Basica</h3>
+          <img src="assets/imgs/bolsabasica.jpg" alt="Bolsa Basica">
+          <p>R$ 99,90</p>
+          <button class="buy" onclick="addToCart('Bolsa Basica', 99.90)">Adicionar</button>
+        </div>
+
+      </div>
+
+      <div id="cart" class="cart" style="display: none;">
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Comprar</button>
+        <button onclick="toggleCart()">Fechar</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/index.js"></script>
+</body>
+</html>
+
